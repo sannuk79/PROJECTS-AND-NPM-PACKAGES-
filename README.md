@@ -16,6 +16,16 @@ Welcome to my professional laboratory. Here, I build production-grade NPM packag
 
 ![API Monitor Dashboard](./APIRESPONSE%20DASH.png)
 
+### � Workflow Overview
+```mermaid
+graph LR
+    A[Request] --> B[Generate RequestID]
+    B --> C[Intercept Response]
+    C --> D[Calculate Metrics]
+    D --> E[Async Logging/Storage]
+    E --> F[Dashboard/Analytics]
+```
+
 - **Production Tracing**: Auto-generated `requestId` in every response.
 - **Advanced Monitoring**: Built-in slow endpoint detection & health metrics.
 - **Fail-Safe Design**: Monitoring logic never blocks or crashes your API.
@@ -31,6 +41,18 @@ Welcome to my professional laboratory. Here, I build production-grade NPM packag
 [![NPM Version](https://img.shields.io/npm/v/payload-guard-filter?color=blue)](https://www.npmjs.com/package/payload-guard-filter)
 
 ![Payload Guard Workflow](./PAYLOAD.png)
+
+### �️ Workflow Overview
+```mermaid
+graph LR
+    A[Request] --> B(Gatekeeper)
+    B --> C{Shape Check}
+    C -- Valid --> D[Redact & Clean]
+    C -- Invalid --> E[Strict Error / Fail Safe]
+    D --> F[Secure Response]
+    E --> F
+    F --> G((Metrics))
+```
 
 - **Shape-based Filtering**: Define what you want, auto-remove everything else.
 - **Sensitive Protection**: `password`, `token`, `secret` auto-redacted.
