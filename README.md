@@ -6,10 +6,11 @@ Welcome to my professional laboratory. Here, I build production-grade NPM packag
 
 ---
 
+
 ## 💎 Featured NPM Packages
 
 ### 📊 1. API Response Monitor
-**Enterprise-grade monitoring middleware for Node.js.**
+**Debug production API issues in seconds with request tracing and slow endpoint detection.**
 
 [![NPM Version](https://img.shields.io/npm/v/@sannuk792/api-response-monitor?color=brightgreen)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
 [![NPM Downloads](https://img.shields.io/npm/dm/@sannuk792/api-response-monitor)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
@@ -30,6 +31,11 @@ graph LR
 - **Advanced Monitoring**: Built-in slow endpoint detection & health metrics.
 - **Fail-Safe Design**: Monitoring logic never blocks or crashes your API.
 - **Non-Blocking**: Non-allocation fast paths with ~0.2ms overhead.
+
+
+### ⛑️ Maintained actively.
+**Bug fixes usually within 24–48 hours.**
+
 
 **[View on NPM](https://www.npmjs.com/package/@sannuk792/api-response-monitor)** | **[Source Code](https://github.com/sannuk79/ApiMonitor)**
 
