@@ -1,121 +1,106 @@
-# 🚀 Professional Node.js Backend Toolkit
+# 🚀 Sannu Kumar - Full-Stack & Systems Engineer
 
-A collection of production-grade NPM packages designed for high-performance monitoring, security, and data integrity.
+> **Portfolio:** [sannu-portfolio.vercel.app](https://sannu-portfolio.vercel.app/portfolio) | **Catalog:** [Projects Catalog](https://sannu-portfolio.vercel.app/portfolio/projects)
+
+Welcome to my professional laboratory. Here, I build production-grade NPM packages, enterprise-scale web applications, and high-performance mobile solutions.
 
 ---
 
-## 📊 1. API Response Monitor
-**The "Must-Have" Middleware for Production Visibility**
+## 💎 Featured NPM Packages
+
+### 📊 1. API Response Monitor
+**Enterprise-grade monitoring middleware for Node.js.**
 
 [![NPM Version](https://img.shields.io/npm/v/@sannuk792/api-response-monitor?color=brightgreen)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
 [![NPM Downloads](https://img.shields.io/npm/dm/@sannuk792/api-response-monitor)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
 
 ![API Monitor Dashboard](./APIRESPONSE%20DASH.png)
 
-### 💡 Why it exists?
-Debugging production APIs is hard. Traditional logs are scattered and lack context. This package provides:
-- **Tracing**: Auto-generated `requestId` in every response.
-- **Observability**: Built-in slow endpoint detection and error alerts.
-- **Performance**: Negligible ~0.2ms overhead with a "Minimal Mode" for high-traffic apps.
-- **Dashboard**: Professional React-based analytics UI.
+- **Production Tracing**: Auto-generated `requestId` in every response.
+- **Advanced Monitoring**: Built-in slow endpoint detection & health metrics.
+- **Fail-Safe Design**: Monitoring logic never blocks or crashes your API.
+- **Non-Blocking**: Non-allocation fast paths with ~0.2ms overhead.
 
-**[View on NPM](https://www.npmjs.com/package/@sannuk792/api-response-monitor)** | **[GitHub Repo](https://github.com/sannuk79/ApiMonitor)**
+**[View on NPM](https://www.npmjs.com/package/@sannuk792/api-response-monitor)** | **[Source Code](https://github.com/sannuk79/ApiMonitor)**
 
 ---
 
-## 🛡️ 2. Payload Guard
-**Lightweight, Zero-Dependency Shape-based Filtering & Sanitization**
+### 🛡️ 2. Payload Guard
+**Lightweight, zero-dependency shape-based filtering & sanitization.**
 
 [![NPM Version](https://img.shields.io/npm/v/payload-guard-filter?color=blue)](https://www.npmjs.com/package/payload-guard-filter)
-[![NPM Downloads](https://img.shields.io/npm/dm/payload-guard-filter)](https://www.npmjs.com/package/payload-guard-filter)
 
 ![Payload Guard Workflow](./PAYLOAD.png)
 
-### 🛡️ Workflow Overview
-```mermaid
-graph LR
-    A[Request] --> B(Gatekeeper)
-    B --> C{Shape Check}
-    C -- Valid --> D[Redact & Clean]
-    C -- Invalid --> E[Strict Error / Fail Safe]
-    D --> F[Secure Response]
-    E --> F
-    F --> G((Metrics))
-```
+- **Shape-based Filtering**: Define what you want, auto-remove everything else.
+- **Sensitive Protection**: `password`, `token`, `secret` auto-redacted.
+- **High Performance**: Optimized schema compilation for sub-millisecond execution.
 
-### ✨ Top Features
-- **Shape-based filtering** — Auto-remove unexpected fields.
-- **Security First** — `password`, `token`, `secret` automatically removed.
-- **Blazing fast** — Sub-millisecond overhead (faster than Zod/JOI).
-- **Fail-Safe** — Non-blocking design never crashes your production app.
+**[View on NPM](https://www.npmjs.com/package/payload-guard-filter)**
 
-**[View on NPM](https://www.npmjs.com/package/payload-guard-filter)** | **[Usage Guide](#)**
+---
+
+## 📂 Project Catalog
+
+A selection of production-grade applications and experimental prototypes.
+
+| Project | Category | Description | Tech Stack |
+|:---|:---|:---|:---|
+| **DRIVERRUNNER** | Mobile | Complete Ride Sharing Platform with real-time tracking & payments. | Node, Mongo, RN, Socket.IO |
+| **SHOPMIND AI** | Web | AI-powered price comparison with Rust-accelerated scraping. | Next.js 15, FastAPI, Rust |
+| **URBANCRUISE LMS** | Web | Enterprise Lead Management System with real-time visualization. | Next.js, Express, MySQL |
+| **TASKVISTA** | Web | Team Management Dashboard for developer communities. | React, Kendo UI, Tailwind |
+| **BIOMETRIC AUTH** | Tools | WebAuthn system for passwordless fingerprint login. | WebAuthn, React 19, Security |
+| **API MONITOR** | Tools | The official NPM package for API latency and health tracking. | NPM, Node.js, Metrics |
+
+### ✨ Project Deep Dives
+
+#### 🚕 [DriverRunner](#)
+A comprehensive ride-hailing solution featuring 3 separate apps. Includes OTP-based authentication, real-time driver tracking (React Native Maps), and live booking systems via Socket.IO.
+
+#### 🤖 [ShopMind AI](https://shopmind-ai.vercel.app/)
+Intelligent price comparison platform. Uses Rust-accelerated scraping engines for speed and WebAuthn for biometric fingerprint login.
+
+#### 📊 [UrbanCruise LMS](https://lms-leadmangsystem.vercel.app/)
+Enterprise-grade lead tracking system. Handles multi-source collection (Meta, Google Ads) with real-time dashboards using Recharts and role-based access control.
 
 ---
 
 ## ⚡ Performance Benchmarks
 
-Data-driven proof of sub-millisecond overhead and high-scale readiness.
-
-### 🛡️ Payload Guard Performance
-*Benchmarked on Node.js v22.2.0*
-
+### 🛡️ Payload Guard (Production Scale)
 | Benchmark | ops/sec | avg (ms) |
 |-----------|---------|----------|
-| **Small payload** (5 fields) | 449,365 | **0.0022ms** |
-| **Medium payload** (50 posts) | 7,791 | **0.1284ms** |
-| **Large payload** (1000 users) | 246 | **4.0724ms** |
+| **Small payload** | 449,365 | **0.0022ms** |
+| **Medium payload** | 7,791 | **0.1284ms** |
+| **Large payload** | 246 | **4.0724ms** |
 
-> **Memory Usage**: ~121 MB Heap Used (Stable)
-
-### 📊 API Response Monitor Performance
-*Enterprise-grade efficiency*
-
+### 📊 API Monitor (Middleware Overhead)
 | Metric | Full Mode | Minimal Mode |
 |-----------|---------|----------|
-| **Request Latency** | ~0.18ms | **<0.05ms** |
+| **Latency** | ~0.18ms | **<0.05ms** |
 | **Throughput** | 50k+ RPM | 100k+ RPM |
-| **CPU Overhead** | <2% | **Negligible** |
 
 ---
 
-## ⚡ Comparison Guide
+## 🛠️ Combined Usage
 
-| Feature | API Response Monitor | Payload Guard |
-|-----------|-----------------------|---------------|
-| **Primary Goal** | Monitoring & Tracing | Sanitization & Security |
-| **Runtime Overhead** | ~0.2ms | **<0.01ms** |
-| **Dashboard** | ✅ Included | ❌ N/A |
-| **Dependencies** | Minimal | **0 (Zero)** |
-| **Use Case** | Lifecycle Tracking | Input/Output Safety |
-
----
-
-## 📦 Getting Started
-
-```bash
-# Monitoring for Express
-npm i @sannuk792/api-response-monitor
-
-# Security & Sanitization
-npm i payload-guard-filter
-```
-
-### Recommended Production Combo
-Build a hardened API in minutes:
+Build a hardened and monitored API:
 ```javascript
 const { apiMonitor } = require('@sannuk792/api-response-monitor');
 const { guard } = require('payload-guard-filter');
 
 app.use(apiMonitor({ mode: 'minimal' })); // Global Monitoring
-app.post('/login', (req, res) => {
-  const safeData = userShape(req.body);   // Precise Filtering
-  res.json(safeData);
+app.post('/api/secure-data', (req, res) => {
+  const safeBody = userShape(req.body);   // Precise Filtering
+  res.json(safeBody);
 });
 ```
 
 ---
 
 <p align="center">
-  Made with ❤️ by <strong>sannuk792</strong>
+  Connect with me on <strong>[Portfolio](https://sannu-portfolio.vercel.app/portfolio)</strong>
+  <br>
+  Made with ❤️ for High-Performance Systems
 </p>
