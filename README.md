@@ -76,7 +76,7 @@ graph LR
 [![NPM Version](https://img.shields.io/npm/v/flow-debugger?color=purple)](https://www.npmjs.com/package/flow-debugger)
 [![GitHub](https://img.shields.io/badge/GitHub-debugerpackages-purple)](https://github.com/sannuk79/debugerpackages)
 
-![Flow Debugger Dashboard](https://raw.githubusercontent.com/sannuk79/PROJECTS-AND-NPM-PACKAGES-/main/FLOW_DEBUGGER_DASH.webp)
+![Flow Debugger Dashboard](https://raw.githubusercontent.com/sannuk79/debugerpackages/main/assets/flow_debugger_v1.2.0.png)
 
 ### 🔄 Workflow Overview
 ```mermaid
@@ -90,15 +90,12 @@ graph LR
 ```
 
 **Key Features:**
+- **Zero-Config Setup**: Only **3 lines of code** needed for beginners to get full tracing & dashboard.
 - **Auto-Instrumentation**: MongoDB, MySQL, PostgreSQL, Redis, Fetch, Axios — zero code changes
-- **External API Tracing**: Stripe, Razorpay, SendGrid, Twilio auto-tagged
+- **Waterfall View**: (New v1.1.0) High-res visual timeline of every request step.
+- **Python Support**: (New v1.1.0) Cross-language tracing for Flask/FastAPI services.
 - **Root Cause Detection**: Timeout → Failure → Slow bottleneck algorithm
-- **Error Stack Preview**: Shows `errorFile:line` in dashboard (e.g., `auth.service.ts:42`)
-- **Payload Size Detection**: Warns on large payloads (>1MB) slowing requests
-- **Environment Tagging**: Filter traces by dev/staging/production
-- **Trace Search**: Search by traceId, endpoint, error message
 - **Live Dashboard**: Real-time analytics at `/__debugger/dashboard`
-- **Production-Safe**: Never blocks requests, all try/catch wrapped
 
 **Performance:**
 - **Load Tested**: 56,000 requests in 10s (100 concurrent connections)
