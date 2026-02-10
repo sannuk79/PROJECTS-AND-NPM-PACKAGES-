@@ -15,7 +15,7 @@ Welcome to my professional laboratory. Here, I build production-grade NPM packag
 [![NPM Version](https://img.shields.io/npm/v/@sannuk792/api-response-monitor?color=brightgreen)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
 [![NPM Downloads](https://img.shields.io/npm/dm/@sannuk792/api-response-monitor)](https://www.npmjs.com/package/@sannuk792/api-response-monitor)
 
-![API Monitor Dashboard](./APIRESPONSE%20DASH.png)
+![API Monitor Dashboard](./APIRESPONSEDASH.png)
 
 ### � Workflow Overview
 ```mermaid
