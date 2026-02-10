@@ -76,7 +76,7 @@ graph LR
 [![NPM Version](https://img.shields.io/npm/v/flow-debugger?color=purple)](https://www.npmjs.com/package/flow-debugger)
 [![GitHub](https://img.shields.io/badge/GitHub-debugerpackages-purple)](https://github.com/sannuk79/debugerpackages)
 
-![Flow Debugger Architecture](https://via.placeholder.com/800x400/1a1a2e/7c3aed?text=Flow+Debugger+Dashboard)
+![Flow Debugger Dashboard](./FLOW_DEBUGGER_DASH.webp)
 
 ### 🔄 Workflow Overview
 ```mermaid
