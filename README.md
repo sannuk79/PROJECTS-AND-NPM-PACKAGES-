@@ -28,6 +28,8 @@ graph LR
 ```
 
 - **Production Tracing**: Auto-generated `requestId` in every response.
+- **Protocol Metadata**: Built-in SDK version, platform, and service tagging for microservices.
+- **Hardened Stability**: Verified with a **14-point stress test** (100 req/sec, circular ref protection, middleware isolation).
 - **Advanced Monitoring**: Built-in slow endpoint detection & health metrics.
 - **Fail-Safe Design**: Monitoring logic never blocks or crashes your API.
 - **Non-Blocking**: Non-allocation fast paths with ~0.2ms overhead.
@@ -65,6 +67,45 @@ graph LR
 - **High Performance**: Optimized schema compilation for sub-millisecond execution.
 
 **[View on NPM](https://www.npmjs.com/package/payload-guard-filter)**
+
+---
+
+### 🔍 3. Flow Debugger
+**Production-safe request tracing with root cause detection and live analytics dashboard.**
+
+[![NPM Version](https://img.shields.io/npm/v/flow-debugger?color=purple)](https://www.npmjs.com/package/flow-debugger)
+[![GitHub](https://img.shields.io/badge/GitHub-debugerpackages-purple)](https://github.com/sannuk79/debugerpackages)
+
+![Flow Debugger Architecture](https://via.placeholder.com/800x400/1a1a2e/7c3aed?text=Flow+Debugger+Dashboard)
+
+### 🔄 Workflow Overview
+```mermaid
+graph LR
+    A[Request] --> B[Generate TraceID]
+    B --> C[Step-by-Step Tracking]
+    C --> D[Auto-Classify: INFO/WARN/ERROR/CRITICAL]
+    D --> E[Root Cause Detection]
+    E --> F[Analytics Dashboard]
+    F --> G[Search & Filter]
+```
+
+**Key Features:**
+- **Auto-Instrumentation**: MongoDB, MySQL, PostgreSQL, Redis, Fetch, Axios — zero code changes
+- **External API Tracing**: Stripe, Razorpay, SendGrid, Twilio auto-tagged
+- **Root Cause Detection**: Timeout → Failure → Slow bottleneck algorithm
+- **Error Stack Preview**: Shows `errorFile:line` in dashboard (e.g., `auth.service.ts:42`)
+- **Payload Size Detection**: Warns on large payloads (>1MB) slowing requests
+- **Environment Tagging**: Filter traces by dev/staging/production
+- **Trace Search**: Search by traceId, endpoint, error message
+- **Live Dashboard**: Real-time analytics at `/__debugger/dashboard`
+- **Production-Safe**: Never blocks requests, all try/catch wrapped
+
+**Performance:**
+- **Load Tested**: 56,000 requests in 10s (100 concurrent connections)
+- **Throughput**: 5,600 req/sec
+- **Overhead**: <1ms per request
+
+**[View on NPM](https://www.npmjs.com/package/flow-debugger)** | **[Source Code](https://github.com/sannuk79/debugerpackages)**
 
 ---
 
@@ -113,16 +154,23 @@ Enterprise-grade lead tracking system. Handles multi-source collection (Meta, Go
 
 ## 🛠️ Combined Usage
 
-Build a hardened and monitored API:
+Build a hardened, monitored, and debuggable API:
 ```javascript
 const { apiMonitor } = require('@sannuk792/api-response-monitor');
 const { guard } = require('payload-guard-filter');
+const { flowDebugger } = require('flow-debugger');
 
-app.use(apiMonitor({ mode: 'minimal' })); // Global Monitoring
+const debugger_ = flowDebugger({ environment: 'production' });
+
+app.use(apiMonitor({ mode: 'minimal' }));  // Global Monitoring
+app.use(debugger_.middleware);              // Request Tracing
+
 app.post('/api/secure-data', (req, res) => {
-  const safeBody = userShape(req.body);   // Precise Filtering
+  const safeBody = userShape(req.body);     // Precise Filtering
   res.json(safeBody);
 });
+
+// Dashboard: http://localhost:3000/__debugger/dashboard
 ```
 
 ---
