@@ -77,7 +77,9 @@ graph LR
 [![GitHub](https://img.shields.io/badge/GitHub-debugerpackages-purple)](https://github.com/sannuk79/debugerpackages)
 
 ![Flow Debugger Dashboard](./FLOWDEBUGGERDASH.png)
-
+---
+![PROJECT Debugger Dashboard](./FLOWDUBGERDASH.png)
+---
 ### 🔄 Workflow Overview
 ```mermaid
 graph LR
