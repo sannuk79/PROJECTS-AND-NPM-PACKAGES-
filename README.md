@@ -114,8 +114,6 @@ graph LR
 [![NPM Version](https://img.shields.io/npm/v/lazy-render?color=red)](https://www.npmjs.com/package/lazy-render)
 [![NPM Downloads](https://img.shields.io/npm/dm/lazy-render)](https://www.npmjs.com/package/lazy-render)
 
-![Lazy Render Performance](./LAZYRENDER.png)
-
 ### 🔄 Performance Comparison
 | Scenario | Without lazy-render | With lazy-render |
 |----------|-------------------|------------------|
