@@ -108,6 +108,52 @@ graph LR
 
 ---
 
+### 🚀 4. Lazy Render
+**Framework-agnostic virtual scrolling and lazy rendering solution for efficient large dataset rendering.**
+
+[![NPM Version](https://img.shields.io/npm/v/lazy-render?color=red)](https://www.npmjs.com/package/lazy-render)
+[![NPM Downloads](https://img.shields.io/npm/dm/lazy-render)](https://www.npmjs.com/package/lazy-render)
+
+![Lazy Render Performance](./LAZYRENDER.png)
+
+### 🔄 Performance Comparison
+| Scenario | Without lazy-render | With lazy-render |
+|----------|-------------------|------------------|
+| 10,000 items render | 1800ms | 45ms |
+| Memory usage (10k items) | High | Low |
+| Initial load time | Slow | Fast |
+| Scroll performance | Janky | Smooth |
+
+### 🔄 Workflow Overview
+```mermaid
+graph LR
+    A[Scroll Event] --> B[Detect Visible Range]
+    B --> C[Calculate Render Window]
+    C --> D[Render Only Visible Items]
+    D --> E[Prefetch Next Batch]
+    E --> F[Clean Up Off-Screen Items]
+    F --> G[Smooth Scrolling Experience]
+```
+
+**Key Features:**
+- **Framework Agnostic Core**: Pure logic implementation that works across different environments
+- **Virtual Scrolling**: Only renders visible items to improve performance
+- **Smart Prefetching**: Loads data ahead of user scroll to prevent loading gaps
+- **Memory Efficient**: Automatically cleans up off-screen elements
+- **React Adapter**: Easy integration with React applications
+- **Configurable Buffer**: Adjustable buffer size for optimal performance
+- **Overscan Support**: Additional buffer for smoother scrolling
+
+**Performance Benefits:**
+- **Efficient Rendering**: Only visible items render
+- **Memory Management**: Unnecessary items removed
+- **Smart Prefetch**: Data loads ahead of scroll
+- **Smooth Scrolling**: Overscan provides seamless experience
+
+**[View on NPM](https://www.npmjs.com/package/lazy-render)** | **[Source Code](https://github.com/sannuk79/lezzyrender)**
+
+---
+
 ## 📂 Project Catalog
 
 A selection of production-grade applications and experimental prototypes.
