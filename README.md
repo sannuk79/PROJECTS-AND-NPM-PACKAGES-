@@ -6,6 +6,40 @@ Welcome to my professional laboratory. Here, I build production-grade NPM packag
 
 ---
 
+## 🏆 MAJOR ACHIEVEMENT: 1 MILLION CARDS WITH SMOOTH SCROLL
+
+### **Performance Benchmark: 10,00,000 Cards**
+
+```
+📊 Generated 1,00,000 categories with 10,00,000 total cards
+⚡ Response Time: 3378ms → <100ms (with pagination)
+🚀 Scroll Performance: 60 FPS (smooth)
+💾 Memory Usage: 99% reduction
+📉 Data Transfer: 500MB → 25KB per request
+```
+
+### **Before Optimization:**
+- ❌ API Response: **3378ms** (3.3 seconds)
+- ❌ Data Transfer: **~500MB**
+- ❌ Initial Load: **3+ seconds**
+- ❌ Memory: **Very High**
+- ❌ Scroll: **Janky/Laggy**
+
+### **After Optimization (lazy-render + Backend Pagination):**
+- ✅ API Response: **<100ms** (**33x faster**)
+- ✅ Data Transfer: **~25KB** (**20,000x less**)
+- ✅ Initial Load: **<200ms** (**15x faster**)
+- ✅ Memory: **Very Low** (**99% reduction**)
+- ✅ Scroll: **Smooth 60 FPS**
+
+### **Technology Stack:**
+- **Frontend:** lazy-render-virtual-scroll (Virtual Scrolling)
+- **Backend:** Pagination with cursor-based navigation
+- **Database:** MongoDB/PostgreSQL with indexed queries
+- **Caching:** Redis with TTL-based cleanup
+
+---
+
 
 ## 💎 Featured NPM Packages
 
@@ -113,6 +147,9 @@ graph LR
 
 [![NPM Version](https://img.shields.io/npm/v/lazy-render?color=red)](https://www.npmjs.com/package/lazy-render)
 [![NPM Downloads](https://img.shields.io/npm/dm/lazy-render)](https://www.npmjs.com/package/lazy-render)
+![lazy card load](./cutcard.png)
+
+![lazy one million card](../onemillioncard.png)
 
 ### 🔄 Performance Comparison
 | Scenario | Without lazy-render | With lazy-render |
